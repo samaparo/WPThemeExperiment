@@ -2,11 +2,34 @@
 	width: 100%;
 	height: 500px;
 	background-color: black;
+	position:relative;
 	h1 {
 		width: 100%;
 		color:white;
 		text-align: center;
-		padding-top: 17%;
+		padding-top: 200px;
 		font-size: 102px;
 	}
+	#nav{
+		display:block;
+		position:absolute;
+		bottom:0px;
+		left:0px;
+		width: 100%;
+		text-align: center;
+		li {
+			font-size: 30px;
+			display:inline;
+			padding-right: 25px;
+			a{
+				font-weight: bold;
+				text-decoration: none;
+				color: white;
+			}
+		}
+	}
+}
+
+#mainContent{
+	padding-top: 30px;
 }
