@@ -9,9 +9,10 @@
 		<div id="banner">
 			<h1>HERO TEXT</h1>
 			<ul id="nav">
-				<li><a href="#">HOME</a></li>
-				<li><a href="#">ABOUT</a></li>
-				<li><a href="#">BLOG</a></li>
+				<?php 
+					$args = array('container' => false); 
+					wp_nav_menu($args); 
+				?>
 			</ul>
 		</div>
 		<div id="mainContent" class="container">
