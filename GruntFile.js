@@ -11,8 +11,22 @@ module.exports = function(grunt) {
 				port: 5000,
 				base: './',
 				keepalive: true,
+				hostname:"0.0.0.0",
 				debug: true
 			}
+		}
+	},
+	sass: {
+		dist: {
+			files: {
+				"css/layout.css" : "css/scss/layout.scss"
+			}
+		}
+	},
+	watch: {
+		css: {
+			files: 'css/scss/*.scss',
+			tasks: ['sass']
 		}
 	}
 
@@ -22,5 +36,6 @@ module.exports = function(grunt) {
   // LOAD GRUNT PLUGINS ========================================================
   // ===========================================================================
   grunt.loadNpmTasks('grunt-contrib-connect');
-
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 };
